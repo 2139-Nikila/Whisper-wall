@@ -1,0 +1,448 @@
+:root{
+
+--mouse-x:0px;
+
+--mouse-y:0px;
+
+}
+/* ===========================================
+            GOOGLE FONT RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2B211D 0%,
+        #6F5648 45%,
+        #D8C0A8 100%
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 18s ease infinite;
+
+    color:#F8F3EE;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+
+/* ===========================================
+            BACKGROUND GLOW
+=========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    top:-250px;
+    left:-250px;
+
+    background:#B08968;
+
+    filter:blur(180px);
+
+    opacity:.35;
+
+    animation:blobOne 10s infinite alternate;
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:650px;
+    height:650px;
+
+    right:-220px;
+    bottom:-220px;
+
+    background:#E6CCB2;
+
+    filter:blur(180px);
+
+    opacity:.35;
+
+    animation:blobTwo 11s infinite alternate;
+
+    z-index:-2;
+
+}
+
+
+/* ===========================================
+            COMMON LINKS
+=========================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ===========================================
+            COMMON BUTTON
+=========================================== */
+
+button{
+
+    outline:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+
+/* ===========================================
+            COMMON IMAGES
+=========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ===========================================
+            SELECTION
+=========================================== */
+
+::selection{
+
+    background:#B08968;
+
+    color:white;
+
+}
+
+
+/* ===========================================
+            SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#2B211D;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#A67C52;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#D8C0A8;
+
+}
+
+
+/* ===========================================
+            BACKGROUND ANIMATION
+=========================================== */
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+
+/* ===========================================
+            GLOW ANIMATION
+=========================================== */
+
+@keyframes blobOne{
+
+from{
+
+transform:
+translate(0px,0px);
+
+}
+
+to{
+
+transform:
+translate(120px,80px);
+
+}
+
+}
+
+@keyframes blobTwo{
+
+from{
+
+transform:
+translate(0px,0px);
+
+}
+
+to{
+
+transform:
+translate(-120px,-90px);
+
+}
+
+}
+/*=============================
+      SHOOTING STARS
+==============================*/
+
+.meteor-container{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.meteor{
+
+position:absolute;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(
+90deg,
+rgba(255,255,255,1),
+rgba(255,255,255,.6),
+transparent
+);
+
+border-radius:999px;
+
+filter:drop-shadow(0 0 8px white);
+
+transform:rotate(-35deg);
+
+animation:meteor linear infinite;
+
+opacity:0;
+
+}
+
+@keyframes meteor{
+
+0%{
+
+opacity:0;
+
+transform:
+translate(0,0)
+rotate(-35deg);
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translate(-500px,500px)
+rotate(-35deg);
+
+}
+
+}
+/*==========================
+        GLITTER
+==========================*/
+
+.glitter-container{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.glitter{
+
+position:absolute;
+
+border-radius:50%;
+
+background:#FFF8F0;
+
+opacity:0;
+
+box-shadow:
+
+0 0 6px #FFF8F0,
+
+0 0 12px #E6CCB2,
+
+0 0 20px #D8C0A8;
+
+animation:
+
+sparkle ease-in-out infinite;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+opacity:0;
+
+transform:
+
+scale(.2)
+
+translateY(10px);
+
+}
+
+25%{
+
+opacity:1;
+
+transform:
+
+scale(1.4)
+
+translateY(0px);
+
+}
+
+50%{
+
+opacity:.7;
+
+transform:
+
+scale(.8)
+
+translateY(-6px);
+
+}
+
+75%{
+
+opacity:1;
+
+transform:
+
+scale(1.2)
+
+translateY(-12px);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+
+scale(.2)
+
+translateY(-20px);
+
+}
+
+}

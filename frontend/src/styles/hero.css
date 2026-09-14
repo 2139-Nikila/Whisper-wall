@@ -1,0 +1,303 @@
+/* ===========================================
+                HERO SECTION
+=========================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding-top:120px;
+
+transform:
+
+translate(
+
+calc(var(--mouse-x)*0.35),
+
+calc(var(--mouse-y)*0.35)
+
+);
+
+transition:
+
+transform .18s linear;
+
+}
+
+
+/* ===========================================
+                HERO TITLE
+=========================================== */
+
+.hero-title{
+
+font-family:'Sora',sans-serif;
+
+font-size:92px;
+
+font-weight:800;
+
+line-height:92px;
+
+letter-spacing:-3px;
+
+color:#FFF8F0;
+
+animation:
+
+floatHero 6s ease-in-out infinite;
+
+text-shadow:
+
+0 0 30px rgba(255,255,255,.15);
+
+}
+
+.hero-title span{
+
+color:#E8CDB8;
+
+}
+
+
+/* ===========================================
+                HERO SUBTITLE
+=========================================== */
+
+.hero-subtitle{
+
+margin-top:32px;
+
+max-width:760px;
+
+font-size:28px;
+
+font-weight:400;
+
+line-height:48px;
+
+color:rgba(255,248,240,.92);
+
+animation:
+
+floatSubtitle 6s ease-in-out infinite;
+
+animation-delay:.2s;
+
+}
+
+
+/* ===========================================
+                HERO BUTTON
+=========================================== */
+
+.hero-btn{
+
+margin-top:55px;
+
+padding:18px 42px;
+
+border-radius:60px;
+
+font-size:21px;
+
+will-change: transform;
+
+transition:
+transform .18s ease,
+box-shadow .25s ease;
+
+font-weight:600;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#9C6B5B,
+
+#D8B4A0
+
+);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 20px rgba(216,180,160,.35);
+
+animation:
+
+breathe 4.5s ease-in-out infinite;
+
+}
+
+.hero-btn:hover{
+
+transform:
+
+translateY(-5px)
+
+scale(1.05);
+
+box-shadow:
+
+0 0 40px rgba(216,180,160,.7);
+
+}
+
+
+/* ===========================================
+            FLOAT ANIMATION
+=========================================== */
+
+@keyframes floatHero{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes floatSubtitle{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-7px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/* ===========================================
+            BUTTON BREATHING
+=========================================== */
+
+@keyframes breathe{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:
+
+0 0 20px rgba(216,180,160,.35);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 42px rgba(216,180,160,.75);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:
+
+0 0 20px rgba(216,180,160,.35);
+
+}
+
+}
+
+
+/* ===========================================
+            RESPONSIVE
+=========================================== */
+
+@media(max-width:760px){
+
+.hero-title{
+
+font-size: 64px;
+
+line-height: 105px;
+
+}
+
+.hero-subtitle{
+
+font-size:22px;
+
+line-height:38px;
+
+max-width:90%;
+
+}
+
+.hero-btn{
+
+font-size:18px;
+
+padding:14px 55px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-title{
+
+font-size:48px;
+
+line-height:52px;
+
+}
+
+.hero-subtitle{
+
+font-size:18px;
+
+line-height:32px;
+
+}
+
+}

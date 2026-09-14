@@ -1,0 +1,704 @@
+.story-details-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 80px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   STORY CARD
+===================================================== */
+
+.story-details-card {
+
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    color: white;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   STORY HEADER
+===================================================== */
+
+.story-details-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.story-details-author {
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.story-details-date {
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   STORY TITLE
+===================================================== */
+
+.story-details-title {
+
+    font-size: 40px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   STORY CONTENT
+===================================================== */
+
+.story-details-content {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   STORY ACTIONS
+===================================================== */
+
+.story-details-actions {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.story-details-actions .story-action {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.story-details-actions .story-action:hover {
+
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   COMMENTS SECTION
+===================================================== */
+
+.comments-section {
+
+    margin-top: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    color: white;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   COMMENTS HEADER
+===================================================== */
+
+.comments-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+
+.comments-header h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+}
+
+
+.comments-header span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 28px;
+
+    height: 28px;
+
+    padding: 0 8px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   COMMENT FORM
+===================================================== */
+
+.comment-form {
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 20px;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.comment-form textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    min-height: 85px;
+
+    max-height: 220px;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+.comment-form textarea::placeholder {
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.comment-form textarea:disabled {
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   COMMENT FORM BOTTOM
+===================================================== */
+
+.comment-form-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.comment-form-bottom span {
+
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.comment-form-bottom button {
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.comment-form-bottom button:hover:not(:disabled) {
+
+    background: rgba(255, 255, 255, 0.3);
+
+    transform: translateY(-2px);
+}
+
+
+.comment-form-bottom button:disabled {
+
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   COMMENT ERROR
+===================================================== */
+
+.comment-error {
+
+    margin: 0 0 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 80, 100, 0.15);
+
+    border:
+        1px solid rgba(255, 120, 130, 0.3);
+
+    color: #ffd5d9;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   COMMENTS LIST
+===================================================== */
+
+.comments-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.comments-message {
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    padding: 25px 0;
+}
+
+
+/* =====================================================
+   EMPTY COMMENTS
+===================================================== */
+
+.comments-empty {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.comments-empty span {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.comments-empty h3 {
+
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-size: 19px;
+}
+
+
+.comments-empty p {
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   COMMENT CARD
+===================================================== */
+
+.comment-card {
+
+    position: relative;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    transition: 0.3s;
+}
+
+
+.comment-card:hover {
+
+    background: rgba(255, 255, 255, 0.13);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   COMMENT HEADER
+===================================================== */
+
+.comment-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.comment-author {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.comment-avatar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    font-size: 13px;
+}
+
+
+.comment-date {
+
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =====================================================
+   COMMENT CONTENT
+===================================================== */
+
+.comment-content {
+
+    margin: 0;
+
+    padding-right: 10px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   DELETE COMMENT
+===================================================== */
+
+.delete-comment-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 12px;
+
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.delete-comment-button:hover {
+
+    background: rgba(255, 80, 100, 0.18);
+
+    color: #ffd5d9;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .story-details-card {
+
+        padding: 25px;
+
+    }
+
+
+    .story-details-title {
+
+        font-size: 30px;
+
+    }
+
+
+    .story-details-content {
+
+        font-size: 17px;
+
+    }
+
+
+    .story-details-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+
+    .story-details-actions {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .comments-section {
+
+        padding: 20px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .comment-card-header {
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+
+    }
+
+
+    .comment-date {
+
+        margin-left: 37px;
+
+    }
+
+
+    .comment-form-bottom {
+
+        align-items: flex-end;
+
+        gap: 12px;
+
+    }
+
+}
+.saved-action {
+    background: rgba(255, 255, 255, 0.28) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}

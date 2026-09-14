@@ -1,0 +1,407 @@
+/* =========================================================
+   STORY CARD
+========================================================= */
+
+.story-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto 25px auto;
+
+    padding: 28px 32px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    color: white;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.story-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.story-anonymous-name {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #ffe1d2;
+}
+
+
+.story-date {
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.story-title {
+
+    margin: 0 0 12px 0;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.story-content {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.story-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   REACTION ANCHOR
+========================================================= */
+
+/*
+   Each reaction has its own anchor.
+
+   This is important because the Like animation
+   starts from the Like button and the Dislike
+   animation starts from the Dislike button.
+*/
+
+.reaction-anchor {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   NORMAL ACTION BUTTON
+========================================================= */
+
+.story-action {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.story-action:hover {
+
+    background: rgba(255, 255, 255, 0.20);
+
+    transform: translateY(-2px);
+}
+
+
+.story-action svg {
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
+
+.story-action:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   REACTION ANIMATION
+========================================================= */
+
+.reaction-animation {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 5px;
+
+    width: 1px;
+
+    height: 1px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================================
+   FLOATING EMOJIS
+========================================================= */
+
+.reaction-animation span {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    display: block;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+
+/* =========================================================
+   HEART GLOW
+========================================================= */
+
+.reaction-heart {
+
+    filter:
+        drop-shadow(
+            0 0 4px rgba(255, 255, 255, 1)
+        )
+
+        drop-shadow(
+            0 0 8px rgba(255, 70, 140, 1)
+        )
+
+        drop-shadow(
+            0 0 16px rgba(255, 70, 140, 0.9)
+        )
+
+        drop-shadow(
+            0 0 28px rgba(255, 70, 140, 0.6)
+        );
+
+}
+
+
+/* =========================================================
+   HEART SIZES
+========================================================= */
+
+.heart-1 {
+
+    font-size: 25px;
+
+}
+
+
+.heart-2 {
+
+    font-size: 32px;
+
+}
+
+
+.heart-3 {
+
+    font-size: 27px;
+
+}
+
+
+.heart-4 {
+
+    font-size: 35px;
+
+}
+
+
+.heart-5 {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   SAD REACTION
+========================================================= */
+
+.reaction-sad {
+
+    font-size: 28px;
+
+    filter:
+
+        drop-shadow(
+            0 0 4px rgba(255, 255, 255, 0.9)
+        )
+
+        drop-shadow(
+            0 0 10px rgba(100, 150, 255, 0.9)
+        )
+
+        drop-shadow(
+            0 0 20px rgba(100, 150, 255, 0.6)
+        );
+
+}
+
+
+/* =========================================================
+   DISLIKE POSITION
+========================================================= */
+
+.dislike-animation {
+
+    left: 50%;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .story-card {
+
+        padding: 22px 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .story-title {
+
+        font-size: 22px;
+
+    }
+
+
+    .story-content {
+
+        font-size: 15px;
+
+    }
+
+
+    .story-actions {
+
+        gap: 7px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .story-action {
+
+        padding: 8px 11px;
+
+        font-size: 13px;
+
+    }
+
+}
